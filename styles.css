@@ -1,51 +1,123 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-body{
-    background: rgb(4, 20, 5);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100vh;
-}
-
-html{
-    scroll-behavior: smooth;
-}
-h1, h5{
-    color: white;
-    margin: 30px 0;
-}
-img{
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-}
-
-.container{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-decoration: none;
   
 }
+a{
+    color: #fff;
+}
+body {
+  background: rgb(110, 121, 110);
+  height: 100vh;
+}
 
-.images-container{
-display: flex;
-overflow-x: scroll;
-gap: 20px;
--webkit-overflow-scrolling: none;
+html {
+  scroll-behavior: smooth;
+}
+h1,
+h5 {
+  color: white;
+  margin: 30px 0;
+}
+img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+nav {
+  background-image: url(/images/11.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo img {
+  width: 90px;
+  height: 90px;
+}
+.hamburger{
+    cursor: pointer;
+    display: none;
+   
 }
 
 
+.fa{
+    color: #fff;   
+}
 
+ul li{
+    display: inline-block;
+    padding: 0 20px;
+}
 
-@media(max-width:500px){
-    .images-container::-webkit-scrollbar {
-        display: none;
-      }
+.container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.images-container {
+  display: flex;
+  overflow-x: scroll;
+  gap: 20px;
+  -webkit-overflow-scrolling: none;
+}
+
+@media (max-width: 800px) {
+  .images-container::-webkit-scrollbar {
+    display: none;
+  }
+  nav{
+    background-image: none;
+    
+  }
+  a{
+    color: black;
+    
+  }
+  .navlinks{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: #fff;
+    height: 100vh;
+    transition: .5s ease-in-out;
+    
+  }
+  .navlinks .fa{
+    color: black;
+  }
+  .navlinks-container{
+    display: none;
+    transition: display .5s ease-in-out;
+  }
+
+  ul li{
+    display: block;
+    margin: 70px;
+  }
+  .hamburger{
+    cursor: pointer;
+
+    display: block;
+}
+.shownav{
+    display: block;
+}
 }
